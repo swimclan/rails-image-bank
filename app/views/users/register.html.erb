@@ -1,0 +1,18 @@
+<div class="panel">
+  <div class="paneltitle">
+    Please register an account
+    <% if @message.nil? == false %>
+      <p class="error"><%= @message %></p>
+    <% end %>
+  </div>
+  <div class="panelbody">
+    <%= form_for :user, url: { :action => 'create' } do |f| %>
+      <%= f.text_field :name, :placeholder => 'Enter Your Name' %>
+      <%= f.text_field :email, :placeholder => 'Enter Your Email' %>
+      <%= f.password_field :password, :placeholder => 'Choose a Password' %>
+      <%= f.password_field :password_confirmation, :placeholder => 'Confirm Your Password' %>
+      <%= f.submit 'Save' %>
+    <% end %>
+  </div>
+
+</div>

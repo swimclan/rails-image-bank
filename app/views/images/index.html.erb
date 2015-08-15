@@ -1,0 +1,20 @@
+<h4><%= @message %></h4>
+<ul class="imagelist">
+  <% @images.each do |image| %>
+    <li>
+      <div class="panel">
+        <div class="paneltitle">
+            <%= image.title %>
+        </div>
+        <div class="panelbody">
+          <figure>
+            <img src="<%= image.url %>" alt="<%= image.title %>" />
+          </figure>
+          <figcaption>
+            <%= image.description %>
+          </figcaption>
+        </div>
+      </div>
+    </li>
+    <% end %>
+</ul>

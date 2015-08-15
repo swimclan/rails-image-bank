@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RailsImageBank</title>
+  <title>Rails Image Bank</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>Rails Image Bank</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/images/new">Add an Image</a>
+    </nav>
+    <div class="auth">
+      <% if current_user.nil? %>
+        <a href="/users/login">Login</a> |
+        <a href="/users/register">Register</a>
+      <% else %>
+        Logged in as: <%= current_user.name %> |
+        <a href="/users/logout">Log out</a>
+      <% end %>
+    </div>
+  </header>
 
 <%= yield %>
+<footer>Image Bank on Rails is brought to you by Swimclan Studions.  &copy;2015.  All Rights Reserved.</footer>
 
 </body>
 </html>

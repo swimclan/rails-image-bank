@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+
+  #images
+  root 'images#index'
+  get 'images/new' => 'images#new'
+  post 'images/create' => 'images#create'
+  get 'images/edit' => 'images#edit'
+  post 'images/update' => 'images#update'
+  patch 'images/delete' => 'images#delete'
+
+  #login/logout
+  get 'users/login' => 'sessions#login'
+  post 'sessions/create' => 'sessions#create'
+  get 'users/logout' =>  'sessions#logout'
+
+  # registration
+  get 'users/register' => 'users#register'
+  post 'users/create' => 'users#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
