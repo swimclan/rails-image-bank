@@ -12,7 +12,7 @@
       <%= f.text_area :description, :placeholder => 'Enter Description' %>
       <%= f.text_field :url, :placeholder => 'Enter Image URL' %>
       <%= f.hidden_field :user_id, :value => session[:user_id] %>
-      <%= f.submit 'Save' %>
+      <%= f.submit 'Save', class: 'btn btn-success'%>
     <% end %>
   </div>
 </div>

@@ -1,2 +1,14 @@
-<h1>Images#edit</h1>
-<p>Find me in app/views/images/edit.html.erb</p>
+<div class="panel">
+  <div class="paneltitle">
+    Edit this image
+  </div>
+  <div class="panelbody">
+    <%= form_for :image, url: { :action => 'update' } do |f| %>
+    <%= f.hidden_field :id, :value => @image.id %>
+    <%= f.text_field :title, :value => @image.title %>
+    <%= f.text_field :url, :value => @image.url %>
+    <%= f.text_area :description, :value => @image.description %>
+    <%= f.submit 'Save' %>
+    <% end %>
+   </div>
+</div>

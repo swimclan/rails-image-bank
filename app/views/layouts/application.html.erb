@@ -8,19 +8,22 @@
 </head>
 <body>
   <header>
+
     <h1>Rails Image Bank</h1>
     <nav>
-      <a href="/">Home</a>
-      <a href="/images/new">Add an Image</a>
+      <ul class="nav nav-tabs">
+        <li><a href="/">Home</a></li>
+        <li><a href="/images/new">Add an Image</a></li>
+      </ul>
     </nav>
-    <div class="auth">
-      <% if current_user.nil? %>
-        <a href="/users/login">Login</a> |
-        <a href="/users/register">Register</a>
-      <% else %>
-        Logged in as: <%= current_user.name %> |
-        <a href="/users/logout">Log out</a>
-      <% end %>
+    <div class="auth clearfix">
+        <% if current_user.nil? %>
+          <a href="/users/login">Login</a> |
+          <a href="/users/register">Register</a>
+        <% else %>
+          Logged in as: <%= current_user.name %> |
+          <a href="/users/logout">Log out</a>
+        <% end %>
     </div>
   </header>
 

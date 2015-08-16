@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'images#index'
   get 'images/new' => 'images#new'
   post 'images/create' => 'images#create'
-  get 'images/edit' => 'images#edit'
+  post 'images/edit' => 'images#edit'
   post 'images/update' => 'images#update'
   patch 'images/delete' => 'images#delete'
 

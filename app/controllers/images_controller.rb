@@ -25,18 +25,28 @@ class ImagesController < ApplicationController
     puts params
     puts '----------------------'
     @image = Image.new(image_params)
-    if !@image.save
-        redirect_to '/'
-    end
+    @image.save
+    redirect_to '/'
   end
 
   def edit
+    # render the edit form
+    #get the image to edit
+    @image = Image.find(params[:image][:id])
   end
 
   def update
+    # process the edit and save into the database
+    @image = Image.find(params[:image][:id])
+
+    @image.update(:title => params[:image][:title], :url => params[:image][:url], :description => params[:image][:description])
+    @message = "Image updated"
+    redirect_to '/'
   end
 
   def delete
+    @image = Image.find(params[:image][:id])
+    @image.destroy
   end
 
   #private methods for the images controller class (no one on the outside has access to this class)
