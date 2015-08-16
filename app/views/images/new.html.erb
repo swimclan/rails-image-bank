@@ -1,16 +1,16 @@
-
-<div class="panel">
-  <div class="paneltitle">
-    Add a new image to the bank
-  </div>
-  <div class="panelbody">
+<div class="editform col-md-8 col-md-offset-2">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Add a new image to the bank
+    </div>
+  <div class="panel-body">
     <p>
       Please fill out the form to add a new image to the image bank.  Once you upload this please refer to our terms and conditions for further information
     </p>
     <%= form_for :image, url: { :action => 'create' }  do |f| %>
       <%= f.text_field :title, :placeholder => 'Enter Title' %>
-      <%= f.text_area :description, :placeholder => 'Enter Description' %>
       <%= f.text_field :url, :placeholder => 'Enter Image URL' %>
+      <%= f.text_area :description, :placeholder => 'Enter Description', :class => 'description' %>
       <%= f.hidden_field :user_id, :value => session[:user_id] %>
       <%= f.submit 'Save', class: 'btn btn-success'%>
     <% end %>

@@ -1,5 +1,5 @@
-<div class="editform">
-    <div class="panel panel-default">
+<div class="editform col-md-8 col-md-offset-2">
+  <div class="panel panel-default">
     <div class="panel-heading">
       Edit this image
     </div>
@@ -8,8 +8,8 @@
       <%= f.hidden_field :id, :value => @image.id %>
       <%= f.text_field :title, :value => @image.title %>
       <%= f.text_field :url, :value => @image.url %>
-      <%= f.text_area :description, :value => @image.description %>
-      <%= f.submit 'Save' %>
+      <%= f.text_area :description, :value => @image.description, class: 'description' %>
+      <%= f.submit 'Save', class: 'btn btn-success' %>
       <% end %>
      </div>
   </div>

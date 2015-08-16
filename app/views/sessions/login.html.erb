@@ -1,15 +1,17 @@
-<div class="panel">
-  <div class="paneltitle">
+<div class="editform col-md-8 col-md-offset-2">
+  <div class="panel panel-default">
+    <div class="panel-heading">
     Please Login
     <% if @message.nil? == false %>
       <p class="error"><%= @message %></p>
     <% end %>
   </div>
-  <div class="panelbody">
+  <div class="panel-body">
     <%= form_for :user, url: { :action => 'create' } do |f| %>
       <%= f.text_field :email,  placeholder: 'Enter Email Address' %>
       <%= f.password_field :password,  placeholder: 'Enter Password' %>
-      <%= f.submit 'Login' %>
+      <%= f.submit 'Login', :class => 'btn btn-primary' %>
     <% end %>
   </div>
+</div>
 </div>

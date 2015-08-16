@@ -2,21 +2,14 @@
 <html>
 <head>
   <title>Rails Image Bank</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-
-    <h1>Rails Image Bank</h1>
-    <nav>
-      <ul class="nav nav-tabs">
-        <li><a href="/">Home</a></li>
-        <li><a href="/images/new">Add an Image</a></li>
-      </ul>
-    </nav>
+  <div class="container">
     <div class="auth clearfix">
         <% if current_user.nil? %>
           <a href="/users/login">Login</a> |
@@ -26,11 +19,21 @@
           <a href="/users/logout">Log out</a>
         <% end %>
     </div>
-  </header>
-<section class="row">
-  <%= yield %>
-</section>
-<footer>Image Bank on Rails is brought to you by Swimclan Studions.  &copy;2015.  All Rights Reserved.</footer>
+    <header>
+
+      <h1>Rails Image Bank</h1>
+      <nav>
+        <ul class="nav nav-tabs">
+          <li><a href="/">Home</a></li>
+          <li><a href="/images/new">Add an Image</a></li>
+        </ul>
+      </nav>
+    </header>
+  <section class="row">
+    <%= yield %>
+  </section>
+  <footer>Image Bank on Rails is brought to you by Swimclan Studions.  &copy;2015.  All Rights Reserved.</footer>
+</div>
 
 </body>
 </html>

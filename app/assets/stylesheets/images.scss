@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.imagepanel {
+  width: 330px;
+}
+
 .modifybuttons {
   float: right;
   .edit {
@@ -18,15 +22,31 @@
   margin: 0;
 }
 
-figcaption {
-  font-style: italic;
+figure {
+  display: inline;
 }
 
-// .editform {
-//   input, textarea {
-//     height: 4rem;
-//   }
-//   textarea {
-//     height: 9rem;
-//   }
-// }
+figcaption {
+  p {
+    width: 66%;
+    font-style: italic;
+    display: inline;
+}
+}
+
+input[type=text], input[type=password], textarea.description {
+  margin: 1rem auto;
+  font-size: 2.3rem;
+  color: rgb(140, 140, 140);
+  padding-left: 1rem;
+  font-weight: 400;
+  width: 94%;
+  height: 4.5rem;
+  border-radius: 4px;
+  border: 1px solid rgb(230, 230, 230);
+  margin-bottom: 1.5rem;
+}
+
+textarea.description {
+  height: 8rem;
+}

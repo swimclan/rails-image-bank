@@ -6,9 +6,11 @@ class ImagesController < ApplicationController
     # Go get all the images from the database
     current_user_images = Image.all.where(:user_id => current_user)
     if current_user_images.count < 1
+      @modify = false
       @images = Image.all
       @message = 'Images from all users'
     else
+      @modify = true
       @images = current_user_images
       @message = 'Your images'
     end
