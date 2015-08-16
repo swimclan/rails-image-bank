@@ -29,41 +29,35 @@
 .clearfix { display: block; }
 /* close commented backslash hack */
 
- .auth {
-   display: block;
-   float: right;
-   margin-right: 1rem;
-   clear: both;
- }
+header {
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+  }
+}
 
- .imagelist {
-   list-style: none;
-   li {
-     display: inline-block;
-   }
- }
+.auth {
+  position: relative;
+  top: -3rem;
+  display: block;
+  float: right;
+  margin-right: 1rem;
+  clear: both;
+}
 
- .panel {
-   margin-left: 1rem;
-   .panel-heading {
-     height: 5rem;
-   }
- }
+.panel {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  .panel-heading {
+    height: 5.5rem;
+  }
+}
 
- .imagetitle {
-   display: inline-block;
-   flaot: left;
-   width: 40%;
-   margin: 0;
- }
-
- .modifybuttons {
-   float: right;
-   margin-right: 1rem;
-   .edit {
-     display: inline-block;
-   }
-   .delete {
-     display: inline-block;
-   }
- }
+.imagelist {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}

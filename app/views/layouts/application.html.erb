@@ -3,6 +3,7 @@
 <head>
   <title>Rails Image Bank</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:400,100' rel='stylesheet" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -26,8 +27,9 @@
         <% end %>
     </div>
   </header>
-
-<%= yield %>
+<section class="row">
+  <%= yield %>
+</section>
 <footer>Image Bank on Rails is brought to you by Swimclan Studions.  &copy;2015.  All Rights Reserved.</footer>
 
 </body>

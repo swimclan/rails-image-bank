@@ -1,14 +1,16 @@
-<div class="panel">
-  <div class="paneltitle">
-    Edit this image
+<div class="editform">
+    <div class="panel panel-default">
+    <div class="panel-heading">
+      Edit this image
+    </div>
+    <div class="panel-body">
+      <%= form_for :image, url: { :action => 'update' } do |f| %>
+      <%= f.hidden_field :id, :value => @image.id %>
+      <%= f.text_field :title, :value => @image.title %>
+      <%= f.text_field :url, :value => @image.url %>
+      <%= f.text_area :description, :value => @image.description %>
+      <%= f.submit 'Save' %>
+      <% end %>
+     </div>
   </div>
-  <div class="panelbody">
-    <%= form_for :image, url: { :action => 'update' } do |f| %>
-    <%= f.hidden_field :id, :value => @image.id %>
-    <%= f.text_field :title, :value => @image.title %>
-    <%= f.text_field :url, :value => @image.url %>
-    <%= f.text_area :description, :value => @image.description %>
-    <%= f.submit 'Save' %>
-    <% end %>
-   </div>
 </div>
